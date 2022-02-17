@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* ===== Mobile First =====*/
+.steps {
+   margin-top: 5rem;
+
+   &__content {
+      background-color: v.$primary;
+   }
+
+   &__heading {
+      text-align: center;
+      color: v.$white;
+
+      &--description {
+         font-size: 1.8rem;
+         display: block;
+      }
+   }
+
+   &__image {
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+         transform: rotate(-4deg) scale(1.2);
+      }
+   }
+
+   /* ===== Desktop =====*/
+   @include m.tablet {
+      &__grid {
+         @include m.grid(3, v.$spacing);
+      }
+   }
+}

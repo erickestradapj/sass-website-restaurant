@@ -540,4 +540,83 @@ h3 {
     width: 100%;
   }
 }
+
+/* ===== Mobile First =====*/
+.steps {
+  margin-top: 5rem;
+  /* ===== Desktop =====*/
+}
+.steps__content {
+  background-color: #e8505b;
+}
+.steps__heading {
+  text-align: center;
+  color: #ffffff;
+}
+.steps__heading--description {
+  font-size: 1.8rem;
+  display: block;
+}
+.steps__image {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.steps__image:hover {
+  -webkit-transform: rotate(-4deg) scale(1.2);
+          transform: rotate(-4deg) scale(1.2);
+}
+@media (min-width: 768px) {
+  .steps__grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial {
+  background-color: #455a64;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  color: #ffffff;
+}
+.testimonial:last-of-type {
+  margin-bottom: 0;
+}
+.testimonial__header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.testimonial__image {
+  flex-basis: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial__author {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.testimonial__text {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 3.5rem 0 0 0;
+  padding-left: 2rem;
+  position: relative;
+}
+.testimonial__text::before {
+  content: '"';
+  font-size: 10rem;
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  opacity: 0.2;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.testimonials {
+  padding: 5rem 0;
+}
 /*# sourceMappingURL=app.css.map */
