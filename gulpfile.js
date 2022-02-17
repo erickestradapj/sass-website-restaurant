@@ -13,12 +13,15 @@ const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
 function css() {
-   return src('src/assets/scss/app.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass())
-      .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(sourcemaps.write('.'))
-      .pipe(dest('build/css'));
+   return (
+      src('src/assets/scss/app.scss')
+         .pipe(sourcemaps.init())
+         .pipe(sass())
+         // .pipe(postcss([autoprefixer(), cssnano()]))
+         .pipe(postcss([autoprefixer()]))
+         .pipe(sourcemaps.write('.'))
+         .pipe(dest('build/css'))
+   );
 }
 
 function images() {

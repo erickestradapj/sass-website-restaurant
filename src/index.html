@@ -1,19 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>App Delivery</title>
-
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
          rel="stylesheet"
       />
-      <link rel="stylesheet" href="build/css/app.css" />
+      <link rel="stylesheet" href="../build/css/app.css" />
    </head>
    <body>
+      <!-- ==================== HEADER ==================== -->
+      <header class="header container">
+         <div class="header__logo">
+            <img src="../build/img/logo.svg" alt="logo delivery app" />
+         </div>
+
+         <nav class="navigation">
+            <a href="#" class="navigation__link">Iniciar Sesión</a>
+            <a href="#" class="navigation__link">Crear Cuenta</a>
+            <a href="#" class="navigation__link navigation__link--register">Registrar Restaurant</a>
+         </nav>
+      </header>
+
+      <!-- ==================== FORM ==================== -->
+      <section class="form container">
+         <div class="form__grid">
+            <div class="form__content">
+               <h2 class="form__heading">Encuentra y Pide comida de tu restaurante favorito</h2>
+
+               <form class="form__search">
+                  <div class="form__field">
+                     <label for="restaurant" class="form__label">Restaurant</label>
+                     <input id="restaurant" class="form__input" type="text" placeholder="Tacos México" />
+                  </div>
+
+                  <div class="form__field">
+                     <label for="dish" class="form__label">Platillo</label>
+                     <input
+                        id="dish"
+                        class="form__input"
+                        type="text"
+                        placeholder="Pizza, Ensalada, Hamburguesa"
+                     />
+                  </div>
+                  <input type="submit" class="form__submit" value="Buscar" />
+               </form>
+            </div>
+            <div class="form__image-container">
+               <img class="form__image" src="../build/img/dibujo_repartidor.svg" alt="image delivery" />
+            </div>
+         </div>
+      </section>
    </body>
 </html>
