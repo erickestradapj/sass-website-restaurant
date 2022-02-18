@@ -615,8 +615,217 @@ h3 {
   opacity: 0.2;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
+@media (min-width: 768px) {
+  .testimonial {
+    margin-bottom: 0;
+  }
+  .testimonial:nth-child(1) {
+    grid-column: 1/4;
+  }
+  .testimonial:nth-child(3) {
+    grid-column: 5/6;
+    grid-row: 1/3;
+  }
+  .testimonial:nth-child(4) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .testimonial:nth-child(5) {
+    grid-column: 3/5;
+  }
+}
 
 .testimonials {
   padding: 5rem 0;
+}
+.testimonials__heading {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .testimonials__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.favorite {
+  background-color: #ffffff;
+  padding: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(174, 190, 205, 0.3);
+}
+.favorite:last-of-type {
+  margin-bottom: 0;
+}
+.favorite__image {
+  max-width: 20rem;
+  margin: 0 auto 2rem auto;
+}
+.favorite__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.favorite__name {
+  margin: 1rem 0;
+  color: #e8505b;
+  font-size: 2.4rem;
+}
+.favorite__description {
+  margin: 0.5rem 0;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #455a64;
+}
+@media (min-width: 768px) {
+  .favorite__grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .favorite {
+    margin-bottom: 0;
+  }
+  .favorite__grid {
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+  }
+  .favorite__content {
+    align-items: flex-start;
+  }
+  .favorite__description {
+    text-align: left;
+  }
+}
+
+.favorites {
+  background-color: #eceeef;
+  padding: 5rem 0;
+}
+.favorites__heading {
+  text-align: center;
+  color: #455a64;
+}
+@media (min-width: 768px) {
+  .favorites__grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.distributors {
+  padding: 5rem 0;
+}
+.distributors__heading {
+  text-align: center;
+  color: #455a64;
+}
+.distributors__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.distributors__text {
+  line-height: 1.5;
+  color: #455a64;
+}
+.distributors__link {
+  background-color: #e8505b;
+  font-size: 2rem;
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+.distributors__link:hover {
+  cursor: pointer;
+  background-color: #e22331;
+}
+@media (min-width: 768px) {
+  .distributors__link {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .distributors__grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.download {
+  background-color: #eceeef;
+  padding: 5rem;
+}
+.download__grid {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.download__image {
+  width: 50%;
+  margin: 0 auto;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  margin: 5rem auto 0 auto;
+}
+.download__image:hover {
+  -webkit-transform: rotate(4deg) scale(1.2);
+          transform: rotate(4deg) scale(1.2);
+}
+@media (min-width: 768px) {
+  .download__grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .download__image {
+    margin-top: 0;
+  }
+}
+
+.stores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stores__heading, .stores__text {
+  text-align: center;
+}
+.stores__heading {
+  color: #455a64;
+  margin: 2rem 0 0 0;
+}
+.stores__text {
+  margin-bottom: 3rem;
+}
+.stores__link {
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.stores__link:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.stores__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 /*# sourceMappingURL=app.css.map */

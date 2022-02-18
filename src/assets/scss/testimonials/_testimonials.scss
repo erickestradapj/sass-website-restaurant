@@ -3,4 +3,14 @@
 
 .testimonials {
    padding: v.$spacing 0;
+
+   &__heading {
+      text-align: center;
+   }
+
+   @include m.tablet {
+      &__grid {
+         @include m.grid(5, 2rem);
+      }
+   }
 }
